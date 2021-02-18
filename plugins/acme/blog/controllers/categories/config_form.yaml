@@ -17,7 +17,7 @@ defaultRedirect: acme/blog/categories
 # Create page
 create:
     title: Create Category
-    redirect: acme/blog/categories/update/:id
+    redirect: acme/blog/categories
     redirectClose: acme/blog/categories
 
 # Update page

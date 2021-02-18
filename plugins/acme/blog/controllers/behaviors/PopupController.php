@@ -31,4 +31,23 @@ class PopupController extends ControllerBehavior
 
         return $this->controller->listRefresh();
     }
+
+    public function onCreateForm()
+    {
+        $this->controller->asExtension('FormController')->create();
+
+        return $this->controller->makePartial('form_create');
+    }
+
+    public function onCreate()
+    {
+        return $this->controller->asExtension('FormController')->create_onSave();
+    }
+
+    public function onLoadReorder()
+    {
+        $this->controller->asExtension('ReorderController')->reorder();
+
+        return $this->controller->makePartial('form_reorder');
+    }
 }

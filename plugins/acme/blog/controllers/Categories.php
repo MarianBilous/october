@@ -2,7 +2,8 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
-
+use Response;
+use View;
 /**
  * Categories Back-end Controller
  */
@@ -40,4 +41,18 @@ class Categories extends Controller
         BackendMenu::setContext('Acme.Blog', 'blog', 'categories');
     }
 
+    public function create($context = null)
+    {
+        return Response::make(View::make('cms::404'), 404);
+    }
+
+    public function update($recordId = null, $context = null)
+    {
+        return Response::make(View::make('cms::404'), 404);
+    }
+
+    public function reorder()
+    {
+        return Response::make(View::make('cms::404'), 404);
+    }
 }

@@ -1,14 +1,19 @@
 <div data-control="toolbar">
     <a
-        href="<?= Backend::url('acme/blog/categories/create') ?>"
+        data-control="popup"
+        data-handler="onCreateForm"
+        href="javascript:;"
         class="btn btn-primary oc-icon-plus">
         New Category
     </a>
-    <a
-        href="<?= Backend::url('acme/blog/categories/reorder') ?>"
-        class="btn btn-primary oc-icon-sort">
+
+    <button
+        data-control="popup"
+        data-handler="onLoadReorder"
+        href="javascript:;"
+        class="btn btn-default oc-icon-sort">
         Reorder
-    </a>
+    </button>
 
     <button
         class="btn btn-danger oc-icon-trash-o"

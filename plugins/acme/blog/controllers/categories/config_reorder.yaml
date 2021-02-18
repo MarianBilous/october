@@ -17,4 +17,4 @@ modelClass: Acme\Blog\Models\Category
 # Toolbar widget configuration
 toolbar:
   # Partial for toolbar buttons
-  buttons: list_toolbar
+  buttons: reorder_toolbar

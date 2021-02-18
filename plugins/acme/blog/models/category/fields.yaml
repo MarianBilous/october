@@ -1,0 +1,11 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+    visibility:
+        label: Display content
+        type: checkbox
+        default: true

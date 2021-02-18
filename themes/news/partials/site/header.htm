@@ -1,0 +1,29 @@
+[facebook]
+==
+<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="{{ 'home'|page }}">
+            <h4>
+                <b>Home</b>
+            </h4>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav mr-auto">
+                <a class="navbar-brand" href="{{ 'categories'|page }}">
+                    Category
+                </a>
+                <a class="navbar-brand" href="{{ 'tags'|page }}">
+                    Tags
+                </a>
+                <a class="navbar-brand" href="{{ 'contact'|page }}">
+                    Contact Us
+                </a>
+                <a class="navbar-brand" href="https://www.facebook.com/v9.0/dialog/oauth?client_id={{facebook.ID}}&redirect_uri={{facebook.URL}}">
+                    Login Facebook
+                </a>
+            </ul>
+        </div>
+    </div>
+</nav>

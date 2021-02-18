@@ -1,0 +1,13 @@
+1.0.1: First version of Blog
+1.0.2:
+  - Create articles table
+  - Create categories table
+  - Create tags table
+  - Create articleTags table
+  - create_categories_table.php
+  - create_tags_table.php
+  - create_articles_table.php
+  - create_article_tags_table.php
+1.0.3:
+  - Create contacts table
+  - create_contacts_table.php

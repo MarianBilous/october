@@ -1,0 +1,34 @@
+title = "Info article"
+url = "/info-article/:slug"
+layout = "default"
+is_hidden = 0
+
+[articleDetail]
+==
+
+<div class="card mt-4">
+    <div style="text-align: center">
+        <img class="card-img-top img-fluid" src="{{ articleDetail.getSlug.image.thumb(200,auto) }}" style="width: 440px; height: auto;">
+    </div>
+
+    <div class="card-body">
+        <h3 class="card-title">{{ articleDetail.getSlug.name }} </h3>
+        {{ articleDetail.getSlug.content|raw }}
+        <div>
+            Date created: {{ articleDetail.getSlug.created_at }}
+        </div>
+        <div>
+            Date updated: {{ articleDetail.getSlug.updated_at }}
+        </div>
+
+        <h3>Category</h3>
+
+        {{ articleDetail.getSlug.category.name }}
+
+        <h3>Tags</h3>
+
+        {% for tag in articleDetail.getSlug.tag %}
+            {{ tag.name }}
+        {% endfor %}
+    </div>
+</div>

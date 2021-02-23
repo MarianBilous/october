@@ -1,3 +1,31 @@
-<p>This is the default markup for component Articles</p>
+<form>
+    <div
+        data-inspectable
+        data-inspector-title="Some inspectable element"
+        data-inspector-description="Some description">
+            <input
+                data-inspector-values
+                type="hidden"
+                value="JSON"/>
+    </div>
+    <input name="country" type="text" value="fsdfsdfsf">
+    <button type="submit">test</button>
+</form>
 
-<small>You can delete this file if you want</small>
+<script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+<script>
+    $(document).on('hiding.oc.inspector', 'div[data-inspectable]', function(ev, data){
+        console.log("test")
+        if (!confirm('Allow hiding?')) {
+            ev.preventDefault()
+        }
+    })
+    $(document).on('showing.oc.inspector', 'div[data-inspectable]', function(ev, data){
+        console.log("test")
+        ev.stopPropagation()
+        // The callback function can be called asynchronously
+        data.callback()
+    })
+</script>
+
+

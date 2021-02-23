@@ -10,7 +10,18 @@ class Article extends Model
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sluggable;
 
+    public $implement = [
+        'RainLab\Translate\Behaviors\TranslatableModel',
+    ];
 
+    public $translatable = [
+        'name',
+        'slug',
+        'content',
+        'category_id',
+        'visibility',
+    ];
+    
     protected $slugs = [
         'slug' => 'name'
     ];

@@ -85,6 +85,11 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerSchedule($schedule)
+    {
+        $schedule->command('cache:clear')->hourly();
+    }
+
     /**
      * Registers back-end navigation items for this plugin.
      *

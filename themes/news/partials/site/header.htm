@@ -1,6 +1,6 @@
-[facebook]
-
 [viewBag]
+
+[facebook]
 ==
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
     <div class="container">
@@ -25,6 +25,9 @@
                 <a class="navbar-brand" href="{{ 'map'|page }}">
                     Map
                 </a>
+                <a class="navbar-brand" href="{{ 'captcha'|page }}">
+                    Captcha
+                </a>                
                 <a class="navbar-brand" href="https://www.facebook.com/v9.0/dialog/oauth?client_id={{facebook.ID}}&redirect_uri={{facebook.URL}}">
                     Login Facebook
                 </a>

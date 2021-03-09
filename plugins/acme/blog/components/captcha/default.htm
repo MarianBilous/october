@@ -1,0 +1,25 @@
+<script>
+    var onloadCallback = function() {
+        grecaptcha.render('example', {
+        'sitekey' : '6Lc3ZHgaAAAAALegevNoZftIVmjrpZP0TTsrmh04',
+      });
+    };
+</script>
+
+<form data-request="onGetResponse"
+    class="form-group">
+
+    <label>test:</label>
+    <input type="text" class="form-control" name="test">
+<br>
+    <div class="form-group">
+        <div id="example"></div>
+    </div>
+    <button type="submit" class="btn btn-outline-dark mt-3">ok</button>
+</form>
+
+
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+</script>
+

@@ -1,13 +1,17 @@
 <?php namespace Acme\Blog;
 
 use Backend;
+use Illuminate\Support\Facades\Event;
 use System\Classes\PluginBase;
-
+use Config;
 /**
  * Blog Plugin Information File
  */
 class Plugin extends PluginBase
 {
+    public $require = [
+        'VorlonTech.SeoManager',
+    ];
     /**
      * Returns information about this plugin.
      *
@@ -40,6 +44,11 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+        Config::set('cms.backendSkin', 'Acme\Blog\Classes\BackendSkin');
+
+        Event::listen('seo.extendSeoFields', function ($fields) {
+
+        });
 
     }
 

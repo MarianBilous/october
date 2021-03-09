@@ -92,7 +92,7 @@ return [
     */
 
     'backendSkin' => 'Backend\Skins\Standard',
-
+    //'backendSkin' => 'Acme\Blog\Classes\BackendSkin',
     /*
     |--------------------------------------------------------------------------
     | Automatically run migrations on login

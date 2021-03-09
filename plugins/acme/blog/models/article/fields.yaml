@@ -26,14 +26,9 @@ fields:
         type: fileupload
         mode: image
         imageHeight: auto
-        imageWidth: 260
+        imageWidth: auto
         span: left
         thumbOptions:
             mode: crop
-            offset:
-                - 0
-                - 0
-            quality: 90
-            sharpen: 0
             interlace: false
             extension: auto

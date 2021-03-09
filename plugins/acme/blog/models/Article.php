@@ -12,6 +12,7 @@ class Article extends Model
 
     public $implement = [
         'RainLab\Translate\Behaviors\TranslatableModel',
+        '@VorlonTech.SeoManager.Behaviors.Seo',
     ];
 
     public $translatable = [
@@ -21,7 +22,7 @@ class Article extends Model
         'category_id',
         'visibility',
     ];
-    
+
     protected $slugs = [
         'slug' => 'name'
     ];

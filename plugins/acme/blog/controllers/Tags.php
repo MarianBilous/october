@@ -38,4 +38,14 @@ class Tags extends Controller
 
         BackendMenu::setContext('Acme.Blog', 'blog', 'tags');
     }
+
+    // public function index()
+    // {
+    //     return Backend::redirect('acme/blog/tags/helloworld');
+    // }
+
+    public function helloworld()
+    {
+        return "hello";
+    }
 }

@@ -55,4 +55,14 @@ class Categories extends Controller
     {
         return Response::make(View::make('cms::404'), 404);
     }
+
+    // public function update($recordId, $context = null)
+    // {
+    //     //
+    //     // Do any custom code here
+    //     //
+
+    //     // Call the FormController behavior update() method
+    //     return $this->getClassExtension('Backend.Behaviors.FormController')->update($recordId, $context);
+    // }
 }

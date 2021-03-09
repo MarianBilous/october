@@ -62,6 +62,7 @@ class Plugin extends PluginBase
         return [
             'Acme\Blog\Components\category' => 'Category',
             'Acme\Blog\Components\tag' => 'Tag',
+            'Acme\Blog\Components\maps' => 'Maps',
             'Acme\Blog\Components\articles' => 'Articles',
             'Acme\Blog\Components\ContactForm' => 'contactform',
             'Acme\Blog\Components\ArticleDetail' => 'articleDetail',

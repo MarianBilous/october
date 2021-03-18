@@ -1,6 +1,7 @@
 <?php namespace Acme\Blog\Components;
 
 use Cms\Classes\ComponentBase;
+use Input;
 
 class Maps extends ComponentBase
 {

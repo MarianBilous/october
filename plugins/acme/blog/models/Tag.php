@@ -101,4 +101,9 @@ class Tag extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    protected function afterSave()
+    {
+        parent::afterSave();
+    }
 }

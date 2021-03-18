@@ -12,7 +12,7 @@ class Article extends Model
 
     public $implement = [
         'RainLab\Translate\Behaviors\TranslatableModel',
-        '@VorlonTech.SeoManager.Behaviors.Seo',
+        '@VorlonTech.SeoManager.Behaviors.SeoModel',
     ];
 
     public $translatable = [

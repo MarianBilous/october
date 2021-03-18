@@ -2,6 +2,7 @@
 
 use Backend;
 use Illuminate\Support\Facades\Event;
+use RainLab\User\Models\User;
 use System\Classes\PluginBase;
 use Config;
 /**
@@ -46,8 +47,11 @@ class Plugin extends PluginBase
     {
         Config::set('cms.backendSkin', 'Acme\Blog\Classes\BackendSkin');
 
-        Event::listen('seo.extendSeoFields', function ($fields) {
-
+        User::extend(function ($model) {
+            $model->bindEvent('model.afterSave', function () use ($model) {
+                traceLog($model->id);
+                return;
+            });
         });
 
     }
